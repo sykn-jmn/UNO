@@ -36,6 +36,7 @@ class Card:
 
     def face_up(self):
         self.face = 'up'
+
     def face_down(self):
         self.face = 'down'
 
@@ -53,6 +54,7 @@ class Card:
 def all_face_up(cards):
     for card in cards:
         card.face_up()
+
 def all_face_down(cards):
     for card in cards:
         card.face_down()
@@ -187,7 +189,7 @@ class Game:
                 if len(play_cards) == size:
                     self.draw(draw_pile,play_cards)
             else:
-                card_number = int(screen.numinput('Input', 'Enter the card number to play(0 for draw):', 0, 0,
+                card_number = int(screen.numinput('Input', 'Enter the index of the card to play(0 for draw):', 0, 0,
                                               len(play_cards)))
                 while True:
                     if card_number == 0:
